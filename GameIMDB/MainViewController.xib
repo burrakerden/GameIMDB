@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="deneme2222" customModuleProvider="target">
+            <connections>
+                <outlet property="myCollectionView" destination="pJO-sN-pUa" id="0AI-4u-Ppi"/>
+                <outlet property="notFoundLabel" destination="Fpd-Nt-Oav" id="wUO-f5-M5m"/>
+                <outlet property="pageController" destination="Isl-HM-rv7" id="GEA-o3-D5p"/>
+                <outlet property="searchBar" destination="dGD-jJ-8wm" id="0ID-mY-0br"/>
+                <outlet property="sliderCollectionView" destination="dSy-hH-PCv" id="9mT-1P-pEu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="dGD-jJ-8wm">
+                    <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="wnL-zA-hta"/>
+                    </connections>
+                </searchBar>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="w4l-Ng-lRY">
+                    <rect key="frame" x="0.0" y="115" width="393" height="739"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dSy-hH-PCv">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="256"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="256" id="u80-PP-akH"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dap-ST-OWn">
+                                <size key="itemSize" width="393" height="256"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pJO-sN-pUa">
+                            <rect key="frame" x="0.0" y="262" width="393" height="477"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JQU-E4-N0g">
+                                <size key="itemSize" width="393" height="100"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="pJO-sN-pUa" firstAttribute="top" secondItem="dSy-hH-PCv" secondAttribute="bottom" constant="6" id="ESa-9c-5sc"/>
+                        <constraint firstItem="pJO-sN-pUa" firstAttribute="leading" secondItem="w4l-Ng-lRY" secondAttribute="leading" id="JsV-3T-qxN"/>
+                        <constraint firstAttribute="bottom" secondItem="pJO-sN-pUa" secondAttribute="bottom" id="Lmp-O7-m2c"/>
+                        <constraint firstAttribute="trailing" secondItem="dSy-hH-PCv" secondAttribute="trailing" id="V34-7W-e13"/>
+                        <constraint firstItem="dSy-hH-PCv" firstAttribute="leading" secondItem="w4l-Ng-lRY" secondAttribute="leading" id="efD-Re-TIy"/>
+                        <constraint firstAttribute="trailing" secondItem="pJO-sN-pUa" secondAttribute="trailing" id="h2Y-ns-sLq"/>
+                        <constraint firstItem="dSy-hH-PCv" firstAttribute="top" secondItem="w4l-Ng-lRY" secondAttribute="top" id="oEk-bg-aTR"/>
+                    </constraints>
+                </stackView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Isl-HM-rv7">
+                    <rect key="frame" x="0.0" y="362" width="393" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="Sv9-Ht-h3j"/>
+                        <constraint firstAttribute="width" constant="393" id="vlC-Gl-Xiw"/>
+                    </constraints>
+                    <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </pageControl>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, the game you are looking for was not found!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpd-Nt-Oav" userLabel="SeachNotFound">
+                    <rect key="frame" x="16" y="415" width="361" height="40.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Isl-HM-rv7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2eu-Jn-luT"/>
+                <constraint firstItem="w4l-Ng-lRY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3Tq-t4-vn9"/>
+                <constraint firstItem="w4l-Ng-lRY" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="DEY-NA-tZs"/>
+                <constraint firstItem="w4l-Ng-lRY" firstAttribute="top" secondItem="dGD-jJ-8wm" secondAttribute="bottom" id="JOg-PG-Fjt"/>
+                <constraint firstAttribute="trailing" secondItem="Isl-HM-rv7" secondAttribute="trailing" id="Q3g-bh-eSJ"/>
+                <constraint firstItem="dGD-jJ-8wm" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="VK9-WL-ytm"/>
+                <constraint firstItem="dGD-jJ-8wm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Vgz-11-GfJ"/>
+                <constraint firstItem="Fpd-Nt-Oav" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-16" id="Y8g-re-4ss"/>
+                <constraint firstAttribute="bottom" secondItem="Isl-HM-rv7" secondAttribute="bottom" constant="500" id="ckE-c6-MLr"/>
+                <constraint firstItem="Fpd-Nt-Oav" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="415" id="kJx-2K-b6h"/>
+                <constraint firstItem="dGD-jJ-8wm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tnT-xU-gzw"/>
+                <constraint firstItem="Isl-HM-rv7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="362" id="uVJ-oE-wOg"/>
+                <constraint firstItem="Fpd-Nt-Oav" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="w0Y-dH-SDz"/>
+                <constraint firstItem="w4l-Ng-lRY" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wnJ-Uz-KbL"/>
+            </constraints>
+            <point key="canvasLocation" x="49.618320610687022" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MainCollectionViewCell" customModule="GameIMDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2d-ch-7Ox">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamecontroller.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6Uf-HU-BBz">
+                                <rect key="frame" x="4" y="5.6666666666666643" width="150" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ud1-6t-9oE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Game" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j49-SF-zY5">
+                                <rect key="frame" x="162" y="15.999999999999998" width="220" height="20.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="u1h-SZ-XgC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AS3-iy-xFb">
+                                <rect key="frame" x="162" y="61.333333333333343" width="68" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="T8m-ot-3c7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGd-d8-Uv8">
+                                <rect key="frame" x="306" y="53" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="EIJ-oW-dLw"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.36227448449999999" green="0.36227448449999999" blue="0.36227448449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="v3w-g3-gyK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOv-Pm-S2m">
+                                <rect key="frame" x="162" y="38.333333333333336" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="bU3-kt-phr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j49-SF-zY5" firstAttribute="top" secondItem="W2d-ch-7Ox" secondAttribute="top" constant="16" id="2E6-Cc-EXS"/>
+                            <constraint firstItem="6Uf-HU-BBz" firstAttribute="top" secondItem="W2d-ch-7Ox" secondAttribute="top" constant="4" id="KPV-16-J8j"/>
+                            <constraint firstAttribute="bottom" secondItem="WGd-d8-Uv8" secondAttribute="bottom" constant="12" id="McD-An-Rxx"/>
+                            <constraint firstItem="j49-SF-zY5" firstAttribute="leading" secondItem="6Uf-HU-BBz" secondAttribute="trailing" constant="8" id="NWT-N3-eMn"/>
+                            <constraint firstItem="WOv-Pm-S2m" firstAttribute="top" secondItem="j49-SF-zY5" secondAttribute="bottom" constant="2" id="PVJ-1a-s7i"/>
+                            <constraint firstItem="WOv-Pm-S2m" firstAttribute="leading" secondItem="j49-SF-zY5" secondAttribute="leading" id="Xw8-RG-Os3"/>
+                            <constraint firstItem="AS3-iy-xFb" firstAttribute="leading" secondItem="j49-SF-zY5" secondAttribute="leading" id="ZYu-K4-H4o"/>
+                            <constraint firstItem="AS3-iy-xFb" firstAttribute="top" secondItem="WOv-Pm-S2m" secondAttribute="bottom" constant="2" id="ckw-Ge-ivw"/>
+                            <constraint firstItem="6Uf-HU-BBz" firstAttribute="leading" secondItem="W2d-ch-7Ox" secondAttribute="leading" constant="4" id="fcn-xE-P9P"/>
+                            <constraint firstAttribute="bottom" secondItem="6Uf-HU-BBz" secondAttribute="bottom" constant="4" id="spl-Jl-iyg"/>
+                            <constraint firstAttribute="trailing" secondItem="WGd-d8-Uv8" secondAttribute="trailing" constant="12" id="vun-Vo-wnP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="W2d-ch-7Ox" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OVd-fO-ffT"/>
+                <constraint firstAttribute="bottom" secondItem="W2d-ch-7Ox" secondAttribute="bottom" id="lCx-Gh-jDq"/>
+                <constraint firstItem="W2d-ch-7Ox" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rgb-IV-qsg"/>
+                <constraint firstAttribute="trailing" secondItem="W2d-ch-7Ox" secondAttribute="trailing" id="tOL-q4-Htr"/>
+            </constraints>
+            <size key="customSize" width="393" height="100"/>
+            <connections>
+                <outlet property="deleteButton" destination="WGd-d8-Uv8" id="7Sj-1b-YTQ"/>
+                <outlet property="gameDate" destination="WOv-Pm-S2m" id="OBO-QA-RfY"/>
+                <outlet property="gameImage" destination="6Uf-HU-BBz" id="rgM-Cn-rgQ"/>
+                <outlet property="gameRating" destination="AS3-iy-xFb" id="jXO-F1-mUN"/>
+                <outlet property="gameTitle" destination="j49-SF-zY5" id="dOs-pN-7Cz"/>
+            </connections>
+            <point key="canvasLocation" x="46.564885496183201" y="13.380281690140846"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
